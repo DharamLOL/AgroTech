@@ -42,3 +42,15 @@
   color: #1abc9c;
   background: rgba(255,255,255,0.05);
 }
+
+.botaoPerfil {
+  background-image: url('../assets/foto-perfil.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;     
+  height: 40px;
+  border: none;     
+  cursor: pointer;  
+  text-indent: -9999px; 
+}
