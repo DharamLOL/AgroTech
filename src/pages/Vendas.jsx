@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "../css/Vendas.module.css";
 import Header from "../components/Header";
-import { produtos } from "../data"; // Assumindo que seus produtos estão aqui
- // Substitua pelo caminho da sua imagem de banner
+import { produtos } from "../data"; 
+ 
 
 function Vendas() {
-  // Lógica de estado e funções
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('Geral');
   const [itensDoCarrinho, setItensDoCarrinho] = useState([]);
   const [produtosFiltrados, setProdutosFiltrados] = useState(produtos);
