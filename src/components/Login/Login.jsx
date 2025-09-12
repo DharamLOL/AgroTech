@@ -1,7 +1,7 @@
 jsx
 import React, { useState } from 'react';
 import styles from './Login.module.css';
-import loginImage from '../../assets/images/login.jpeg'; 
+import loginImage from '../../assets/images/login.jpeg';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -28,11 +28,12 @@ function Login() {
       <div className={`${styles.backgroundEllipse} ${styles.ellipse2}`}></div>
       
       <div className={`${styles.loginContainer} w-100`}>
-        <div>
+        <div className={styles.card}>
+          
           {/* Imagem no TOPO */}
           <div className={styles.imageContainer}>
             <img
-              src={loginImage}  // 
+              src={loginImage}
               className={styles.loginImage}
               alt="Imagem ilustrativa de login"
             />
@@ -41,19 +42,20 @@ function Login() {
           {/* Formulário de Login */}
           <div className="card-body p-4 p-md-5">
             <form id="loginForm" noValidate onSubmit={handleSubmit}>
+              
               {/* Campo Email */}
               <div className="mb-3">
                 <label className="form-label" htmlFor="email">Email</label>
                 <input 
                   type="email" 
                   id="email" 
-                  className="form-control" 
+                  className={`form-control ${styles.formControl}`}
                   required
                   placeholder="Digite seu e-mail..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <div className="invalid-feedback">
+                <div className={styles.invalidFeedback}>
                   Por favor, insira um e-mail válido.
                 </div>
               </div>
@@ -64,13 +66,13 @@ function Login() {
                 <input 
                   type="password" 
                   id="password" 
-                  className="form-control" 
+                  className={`form-control ${styles.formControl}`}
                   required
                   placeholder="Digite sua senha..."
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <div className="invalid-feedback">
+                <div className={styles.invalidFeedback}>
                   Por favor, insira sua senha.
                 </div>
               </div>
