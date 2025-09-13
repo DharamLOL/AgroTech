@@ -1,4 +1,4 @@
-jsx
+
 import React, { useState } from 'react';
 import styles from './Login.module.css';
 import loginImage from '../../assets/images/login.jpeg';
@@ -23,14 +23,12 @@ function Login() {
   return (
     <div className={`container d-flex justify-content-center align-items-center ${styles.container}`}>
       
-      {/* Bolas de fundo (Ellipses) */}
       <div className={`${styles.backgroundEllipse} ${styles.ellipse1}`}></div>
       <div className={`${styles.backgroundEllipse} ${styles.ellipse2}`}></div>
       
       <div className={`${styles.loginContainer} w-100`}>
         <div className={styles.card}>
           
-          {/* Imagem no TOPO */}
           <div className={styles.imageContainer}>
             <img
               src={loginImage}
@@ -39,11 +37,9 @@ function Login() {
             />
           </div>
 
-          {/* Formulário de Login */}
           <div className="card-body p-4 p-md-5">
             <form id="loginForm" noValidate onSubmit={handleSubmit}>
               
-              {/* Campo Email */}
               <div className="mb-3">
                 <label className="form-label" htmlFor="email">Email</label>
                 <input 
@@ -60,7 +56,6 @@ function Login() {
                 </div>
               </div>
               
-              {/* Campo Senha */}
               <div className="mb-3">
                 <label className="form-label" htmlFor="password">Senha</label>
                 <input 
@@ -77,17 +72,14 @@ function Login() {
                 </div>
               </div>
               
-              {/* Esqueci a senha */}
               <div className="d-flex justify-content-end mb-4">
                 <a href="#!" className="text-decoration-none">Esqueci minha senha</a>
               </div>
               
-              {/* Botão de Entrar */}
               <button type="submit" className={`btn ${styles.bgButton} w-100 py-2 mb-3`}>
                 Entrar
               </button>
               
-              {/* Botão de Cadastro */}
               <button 
                 type="button" 
                 className={`btn ${styles.bgButton2} w-100 py-2 mb-4`}
@@ -96,14 +88,12 @@ function Login() {
                 Cadastrar
               </button>
               
-              {/* Divisor */}
               <div className="d-flex align-items-center my-3">
                 <hr className="flex-grow-1" />
                 <span className="px-2 text-muted">ou</span>
                 <hr className="flex-grow-1" />
               </div>
               
-              {/* Login com Redes Sociais */}
               <div className={styles.socialLogin}>
                 <p className="text-center mb-3">Entrar com:</p>
                 <div className="d-flex justify-content-center gap-3">
