@@ -1,22 +1,24 @@
-/* Estilos Gerais */
 .container {
-  background-color: #f8f9fc;
-  font-family: 'Poppins', sans-serif;
   position: relative;
-  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 40px 20px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  z-index: 0;
 }
 
-/* Bolas de fundo (Ellipses) */
+/* Bolinhas de fundo */
 .backgroundEllipse {
   position: absolute;
   border-radius: 50%;
   background: rgba(205, 202, 231, 0.4);
-  filter: blur(2px);
-  z-index: -1;
+  filter: blur(20px);
+  z-index: 0;
 }
 
 .ellipse1 {
@@ -33,130 +35,101 @@
   right: -100px;
 }
 
-/* Container Principal */
+
+.imageContainer {
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.loginImage {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Formulário centralizado */
 .loginContainer {
   max-width: 500px;
-  margin: 20px auto;
-  position: relative;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: none;
+  z-index: 1;
 }
 
-/* Card do Formulário */
-.card {
-  border: none;
-  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-  background-color: rgba(255, 255, 255, 0.9);
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Tipografia */
-.poppinsText {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #593F71;
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.title {
-  font-family: "Poppins", sans-serif;
-  color: #593F71;
-}
-
-/* Campos do Formulário */
 .formControl {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
 }
 
-/* Botões */
+/* Link esqueci minha senha */
+.forgotPasswordContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgotPassword {
+  color: #347355;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+/* Botões centralizados e maiores */
 .btnCustom {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 16px 0;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 16px;
   display: block;
-}
-
-/* Botão Primário (Enviar) */
-.bgButton {
-  background-color: #347355;
-  color: white;
+  cursor: pointer;
   border: none;
   transition: all 0.3s ease;
-  padding: 10px 0;
+}
+
+.bgButton {
+  background-color: #2c6b4d;
+  color: #fff;
 }
 
 .bgButton:hover {
-  background-color: #2a5d46;
-  color: white;
+  background-color: #255639;
 }
 
-/* Botão Secundário (Cancelar) */
 .bgButton2 {
   background-color: #71637E;
-  color: white;
-  border: none;
-  transition: all 0.3s ease;
-  padding: 10px 0;
+  color: #fff;
 }
 
 .bgButton2:hover {
   background-color: #5d5269;
-  color: white;
-}
-
-/* Imagem ajustada para não cortar */
-.loginImage {
-  max-width: 100%;
-  height: auto;
-  max-height: 150px;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-  border-radius: 6px;
-  padding: 10px 0;
-}
-
-/* Container da Imagem */
-.imageContainer {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Mensagens de Validação */
-.invalidFeedback {
-  color: #e74a3b;
-  font-size: 0.8rem;
-}
-
-.isInvalid {
-  border-color: #e74a3b;
-}
-
-/* Social buttons */
-.socialLogin {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.btnSocial {
-  border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.btnSocial:hover {
-  background-color: #f8f9fa;
-}
-
-.google:hover {
-  background-color: #f8f9fa;
-}
-
-.facebook:hover {
-  background-color: #f8f9fa;
-}
-
-.apple:hover {
-  background-color: #f8f9fa;
 }

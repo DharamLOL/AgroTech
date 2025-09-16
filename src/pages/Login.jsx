@@ -1,141 +1,59 @@
-
 import React, { useState } from 'react';
-import styles from '../css/Login.module.css';
-import loginImage from "../assets/login.jpeg";
+import styles from "../css/Login.module.css";
+import loginImage from "../assets/login.png"
+
 
 function Login() {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Login attempt:', { email, password });
-    // Aqui você pode adicionar a lógica de autenticação
-  };
-
-  const handleCadastro = () => {
-    console.log('Redirecionar para cadastro');
-    // Aqui você pode redirecionar para a página de cadastro
-  };
-
-  const handleSocialLogin = (provider) => {
-    console.log(`Login com ${provider}`);
-    // Aqui você pode adicionar a lógica de login social
-  };
+  const [senha, setSenha] = useState('');
 
   return (
-    <div className={`container d-flex justify-content-center align-items-center ${styles.container}`}>
-      
-      {/* Bolas de fundo (Ellipses) */}
+    <div className={styles.container}>
+      {/* Bolinhas ao fundo */}
       <div className={`${styles.backgroundEllipse} ${styles.ellipse1}`}></div>
       <div className={`${styles.backgroundEllipse} ${styles.ellipse2}`}></div>
-      
-      <div className={`${styles.loginContainer} w-100`}>
-        <div className={styles.card}>
-          
-          {/* Imagem no TOPO */}
-          <div className={styles.imageContainer}>
-            <img
-              src={loginImage}
-              className={styles.loginImage}
-              alt="Imagem ilustrativa de login"
-            />
+
+      {/* Logo maior com fundo branco */}
+      <div className={styles.imageContainer}>
+        <img className={styles.loginImage} src={loginImage} alt="Logo" />
+      </div>
+
+      {/* Formulário */}
+      <div className={styles.loginContainer}>
+        <form className={styles.form}>
+          <label htmlFor="email">E-mail</label>
+          <input
+            className={styles.formControl}
+            type="email"
+            id="email"
+            placeholder="seuemail@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label htmlFor="senha">Senha</label>
+          <input
+            className={styles.formControl}
+            type="password"
+            id="senha"
+            placeholder="********"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+
+          <div className={styles.forgotPasswordContainer}>
+            <a href="/recuperar-senha" className={styles.forgotPassword}>
+              Esqueci minha senha
+            </a>
           </div>
 
-          {/* Formulário de Login */}
-          <div className="card-body p-4 p-md-5">
-            <form id="loginForm" noValidate onSubmit={handleSubmit}>
-              
-              {/* Campo Email */}
-              <div className="mb-3">
-                <label className="form-label" htmlFor="email">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className={`form-control ${styles.formControl}`}
-                  required
-                  placeholder="Digite seu e-mail..."
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <div className={styles.invalidFeedback}>
-                  Por favor, insira um e-mail válido.
-                </div>
-              </div>
-              
-              {/* Campo Senha */}
-              <div className="mb-3">
-                <label className="form-label" htmlFor="password">Senha</label>
-                <input 
-                  type="password" 
-                  id="password" 
-                  className={`form-control ${styles.formControl}`}
-                  required
-                  placeholder="Digite sua senha..."
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <div className={styles.invalidFeedback}>
-                  Por favor, insira sua senha.
-                </div>
-              </div>
-              
-              {/* Esqueci a senha */}
-              <div className="d-flex justify-content-end mb-4">
-                <a href="#!" className="text-decoration-none">Esqueci minha senha</a>
-              </div>
-              
-              {/* Botão de Entrar */}
-              <button type="submit" className={`btn ${styles.bgButton} w-100 py-2 mb-3`}>
-                Entrar
-              </button>
-              
-              {/* Botão de Cadastro */}
-              <button 
-                type="button" 
-                className={`btn ${styles.bgButton2} w-100 py-2 mb-4`}
-                onClick={handleCadastro}
-              >
-                Cadastrar
-              </button>
-              
-              {/* Divisor */}
-              <div className="d-flex align-items-center my-3">
-                <hr className="flex-grow-1" />
-                <span className="px-2 text-muted">ou</span>
-                <hr className="flex-grow-1" />
-              </div>
-              
-              {/* Login com Redes Sociais */}
-              <div className={styles.socialLogin}>
-                <p className="text-center mb-3">Entrar com:</p>
-                <div className="d-flex justify-content-center gap-3">
-                  <button 
-                    type="button" 
-                    className={`btn ${styles.btnSocial} ${styles.google}`}
-                    onClick={() => handleSocialLogin('Google')}
-                  >
-                    <i className="bi bi-google"></i> Google
-                  </button>
-                  <button 
-                    type="button" 
-                    className={`btn ${styles.btnSocial} ${styles.facebook}`}
-                    onClick={() => handleSocialLogin('Facebook')}
-                  >
-                    <i className="bi bi-facebook"></i> Facebook
-                  </button>
-                  <button 
-                    type="button" 
-                    className={`btn ${styles.btnSocial} ${styles.apple}`}
-                    onClick={() => handleSocialLogin('Apple')}
-                  >
-                    <i className="bi bi-apple"></i> Apple
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+          <button type="submit" className={`${styles.btnCustom} ${styles.bgButton}`}>
+            Entrar
+          </button>
+          <button type="reset" className={`${styles.btnCustom} ${styles.bgButton2}`}>
+            Cancelar
+          </button>
+        </form>
       </div>
     </div>
   );
