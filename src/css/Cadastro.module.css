@@ -74,6 +74,7 @@
 .toggleButtonActive {
   background-color: #2c6b4d;
   color: #fff;
+  border-radius: 999px;
 }
 
 /* Formulário principal */
