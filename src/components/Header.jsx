@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../css/Header.module.css";
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo-greensafe.png";
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
       </div>
 
       <nav className={styles.headerNav}>
-        <button className={styles.navButton}>Início</button>
+        <Link to="/Home" ><button href="/Home" className={styles.navButton}>Home</button></Link>
+        
+        
         <button className={styles.navButton}>Produtos</button>
         <button className={styles.navButton}>Sobre</button>
         <button className={styles.navButton}>Contato</button>

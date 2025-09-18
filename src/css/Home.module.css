@@ -1,0 +1,180 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 64px; 
+}
+:global(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero {
+    margin: 10px;
+    color: white;
+    padding: 1rem;
+    height: 180px;
+    background-color: #347355;
+    border-radius: 10px;
+}
+
+.section {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.section h3 {
+    margin-bottom: 0.5rem;
+}
+
+
+.sectionContent {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.offer h6 {
+    color: #D04C00;
+    font-size: 13px;
+}
+
+.offer p {
+    font-size: 13px;
+}
+
+.buttonAction {
+    padding: 0.5rem 1rem;
+    background-color: #593F71;
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.buttonAction:hover {
+  transform: scale(1.05); 
+  background-color: #6a4f8a; 
+}
+
+.cardOffer {
+    gap: 10px;
+    background-color: #32593f;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardOffer img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.cardNetwork {
+    background-color: #fce9db;
+    color: #333;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cardOffer:hover,
+.cardNetwork:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+}
+
+.cardNetwork button {
+    position: relative;
+    bottom: 0;
+    justify-content: end;
+}
+
+.cardNetworkTitle {
+    color: #347355;
+}
+
+.iconShop {
+    width: 20%;
+}
+
+.btnAccess {
+    position: relative;
+    background-color: #593F71;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+    border: none; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btnAccess:hover {
+    transform: scale(1.05); 
+  background-color: #6a4f8a;
+ } 
+
+@media (max-width: 768px) {
+    header,
+    .section {
+        padding: 1rem;
+    }
+
+    .hero {
+        height: 120px;
+    }
+
+    .cardOffer,
+    .cardNetwork {
+        width: 100%;
+    }
+}
