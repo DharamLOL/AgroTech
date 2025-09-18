@@ -14,7 +14,7 @@ function Doar() {
     numero: '',
     bairro: ''
   });
-
+  
   const tiposDeDoador = ['Pessoa física', 'Empresa', 'Supermercado', 'HortiFruit', 'Outro'];
 
   const handleChange = (e) => {

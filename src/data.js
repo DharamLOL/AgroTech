@@ -4,6 +4,7 @@ import salada from './assets/salada.jpg'
 import bolo from './assets/bolo.jpg'
 import laranja from './assets/laranja.jpg'
 import paodequeijo from './assets/paodequeijo.jpg'
+
 export const produtos = [
   { id: 1, nome: 'Frutas diversas', categoria: 'Frutas', preco: 12.00, imagem: frutas },
   { id: 2, nome: 'Pão de queijo', categoria: 'Padaria', preco: 8.50, imagem: paodequeijo },

@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import styles from '../css/Home.module.css'; 
 import Header from '../components/Header';
-
-
 import candysShopImg from '../assets/candysShop.jpg';
 import fruitImg from '../assets/fruit.jpg';
 import fruitsHouseImg from '../assets/fruitsHouse.jpg';

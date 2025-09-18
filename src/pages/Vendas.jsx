@@ -9,8 +9,6 @@ function Vendas() {
   const [itensDoCarrinho, setItensDoCarrinho] = useState([]);
   const [produtosFiltrados, setProdutosFiltrados] = useState(produtos);
   const [searchTerm, setSearchTerm] = useState('');
-  
-
   const categorias = ['Geral', 'Frutas', 'Verduras', 'Laticínios'];
 
   
