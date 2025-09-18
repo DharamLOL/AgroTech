@@ -1,0 +1,135 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 40px 20px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  z-index: 0;
+}
+
+/* Bolinhas de fundo */
+.backgroundEllipse {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(205, 202, 231, 0.4);
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.ellipse1 {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
+}
+
+.ellipse2 {
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  right: -100px;
+}
+
+
+.imageContainer {
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.loginImage {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Formulário centralizado */
+.loginContainer {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: none;
+  z-index: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formControl {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Link esqueci minha senha */
+.forgotPasswordContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgotPassword {
+  color: #347355;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+/* Botões centralizados e maiores */
+.btnCustom {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 16px 0;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.bgButton {
+  background-color: #2c6b4d;
+  color: #fff;
+}
+
+.bgButton:hover {
+  background-color: #255639;
+}
+
+.bgButton2 {
+  background-color: #71637E;
+  color: #fff;
+}
+
+.bgButton2:hover {
+  background-color: #5d5269;
+}
