@@ -8,6 +8,4 @@ function Vendas() {
   );
 }
 
-
-
 export default Vendas;
