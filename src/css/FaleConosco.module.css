@@ -1,0 +1,116 @@
+/* Container geral do formulário */
+.containerFormulario {
+  max-width: 500px; /* largura máxima do bloco */
+  margin: 2rem auto; /* centralizado na página */
+  padding: 2rem; /* espaço interno */
+  background-color: #ffffff; /* fundo branco */
+  border-radius: 12px; /* cantos arredondados do container */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+.titulo {
+  color: #593F71;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  /*max-width: 400px;
+  margin: 2rem auto;*/
+  gap: 1.5rem; /* espaço entre campos */
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels em preto e negrito */
+.label {
+  font-weight: bold; /* negrito */
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: black;
+}
+
+/* Campos de input */
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* bordas levemente curvadas */
+  font-size: 1rem;
+  background-color: #f5f5f5; /* cinza clarinho */
+  color: black;
+}
+
+/* Campo de descrição */
+.textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* bordas levemente curvadas */
+  font-size: 1rem;
+  min-height: 100px;
+  resize: none; /* bloqueia ajuste da caixa */
+  background-color: #f5f5f5; /* cinza clarinho */
+  color: black;
+}
+
+
+.botoesTipo {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Botões de tipo como pílula */
+.botaoTipo {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border-radius: 999px; /* formato de pílula */
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.selecionado {
+  background-color: #71637E;
+  color: white;
+  border-color: #71637E;
+}
+
+/* Botões Cancelar e Enviar como pílula */
+.botoesAcao {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.botaoAcao {
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 999px; /* formato de pílula */
+  background-color: #347355;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mensagemSucesso {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.erro {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
