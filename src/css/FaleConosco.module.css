@@ -1,13 +1,23 @@
-/* Container geral do formulário */
-.containerFormulario {
-  max-width: 500px; /* largura máxima do bloco */
-  margin: 2rem auto; /* centralizado na página */
-  padding: 2rem; /* espaço interno */
+/* Fundo da página */
+.fundoPagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff; /* fundo branco */
-  border-radius: 12px; /* cantos arredondados do container */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* sombra suave */
+  min-height: 100vh;
+  padding: 2rem 0;
 }
 
+/* Container geral do formulário */
+.containerFormulario {
+  max-width: 500px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título */
 .titulo {
   color: #593F71;
   font-size: 2.5rem;
@@ -16,73 +26,70 @@
   margin-top: 2rem;
 }
 
+/* Formulário */
 .formulario {
   display: flex;
   flex-direction: column;
-  /*max-width: 400px;
-  margin: 2rem auto;*/
-  gap: 1.5rem; /* espaço entre campos */
+  gap: 1.5rem;
 }
+
+/* Campos */
 .campo {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
 }
 
-/* Labels em preto e negrito */
 .label {
-  font-weight: bold; /* negrito */
+  font-weight: bold;
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: black;
 }
 
-/* Campos de input */
-.input {
+.input, .textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 8px; /* bordas levemente curvadas */
+  border-radius: 8px;
   font-size: 1rem;
-  background-color: #f5f5f5; /* cinza clarinho */
+  background-color: #f5f5f5;
   color: black;
 }
 
-/* Campo de descrição */
 .textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px; /* bordas levemente curvadas */
-  font-size: 1rem;
   min-height: 100px;
-  resize: none; /* bloqueia ajuste da caixa */
-  background-color: #f5f5f5; /* cinza clarinho */
-  color: black;
+  resize: none;
 }
 
-
+/* Botões de tipo */
 .botoesTipo {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
 
-/* Botões de tipo como pílula */
 .botaoTipo {
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
-  background-color: #f2f2f2;
-  border-radius: 999px; /* formato de pílula */
+  border-radius: 999px;
   cursor: pointer;
   font-size: 0.9rem;
+  background-color: #f2f2f2;
+  color: black; /* Letras pretas padrão */
+  transition: all 0.3s ease;
+}
+
+.botaoTipo:hover {
+  background-color: #e0e0e0;
 }
 
 .selecionado {
   background-color: #71637E;
-  color: white;
+  color: white; /* Letras brancas quando selecionado */
   border-color: #71637E;
 }
 
-/* Botões Cancelar e Enviar como pílula */
+/* Botões de ação */
 .botoesAcao {
   display: flex;
   gap: 1rem;
@@ -93,13 +100,19 @@
 .botaoAcao {
   padding: 0.5rem 2rem;
   border: none;
-  border-radius: 999px; /* formato de pílula */
+  border-radius: 999px;
   background-color: #347355;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.botaoAcao:hover {
+  background-color: #285c44;
+}
+
+/* Mensagens */
 .mensagemSucesso {
   margin-top: 1rem;
   padding: 0.5rem;
