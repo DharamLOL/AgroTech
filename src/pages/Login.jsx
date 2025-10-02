@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from "../css/Login.module.css";
 import loginImage from "../assets/login.png"
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -47,12 +48,16 @@ function Login() {
             </a>
           </div>
 
-          <button type="submit" className={`${styles.btnCustom} ${styles.bgButton}`}>
-            Entrar
-          </button>
-          <button type="reset" className={`${styles.btnCustom} ${styles.bgButton2}`}>
-            Cancelar
-          </button>
+          <Link to="/home">
+            <button type="submit" className={`${styles.btnCustom} ${styles.bgButton}`}>
+              Entrar
+            </button>
+          </Link>
+        
+            <button type="reset" className={`${styles.btnCustom} ${styles.bgButton2}`}>
+              Cancelar
+            </button>
+          
         </form>
       </div>
     </div>
