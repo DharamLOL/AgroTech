@@ -1,5 +1,14 @@
+:global(body) {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../assets/background.png);
+}
 .pageContainer {
-  background-color: #f4f5f7;
+  background-color: rgba(0, 0, 0, 0);
   min-height: 100vh;
   padding-top: 80px; 
   padding-bottom: 40px;

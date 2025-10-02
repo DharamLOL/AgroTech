@@ -17,9 +17,7 @@ const Header = () => {
         <button className={styles.navButton}>Produtos</button>
         <button className={styles.navButton}>Sobre</button>
         <button className={styles.navButton}>Contato</button>
-        <button className={styles.botaoPerfil}>
-          <img src="../assets/foto-perfil.jpg"/>
-        </button>
+        <Link to="/perfilcliente" ><div className={styles.botaoPerfil}><img src="../assets/foto-perfil.jpg"/></div></Link>
       </nav>
     </header>
   );

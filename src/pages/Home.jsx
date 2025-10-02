@@ -39,11 +39,16 @@ function Home() {
         <div className={styles.section}>
             <h3>AÇÕES</h3>
             <div className={styles.sectionContent}>
-            <div className={styles.buttonAction}>Quero doar</div>
-            <div href="/fale-conosco" className={styles.buttonAction}>Patrocinado</div>
-            <a href="/fale-conosco">
-                <div className={styles.buttonAction}>Fale conosco</div>
-            </a>
+            
+            
+                <Link to="/doar" >  <div className={styles.buttonAction}>Quero doar</div>  </Link>
+
+                <Link to="/faleconosco">
+                    <div className={styles.buttonAction}>Patrocinado</div>
+                </Link>
+                <Link to="/faleconosco">
+                    <div className={styles.buttonAction}>Fale conosco</div>
+                </Link>
             <div className={styles.buttonAction}>Voluntariar</div>
             <div className={styles.buttonAction}>Cadastrar ONG</div>
             </div>
@@ -70,7 +75,7 @@ function Home() {
         <div className={styles.section}>
             <h3>CONHEÇA NOSSA REDE</h3>
             <div className={styles.sectionContent}>
-                {/* Mapeando o array 'nossaRede' */}
+                
                 {nossaRede.map((parceiro) => (
                     <div key={parceiro.id} className={styles.cardNetwork}>
                         <img src={iconShopImg} className={styles.iconShop} alt="Ícone de loja" />
