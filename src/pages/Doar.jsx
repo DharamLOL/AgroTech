@@ -3,14 +3,11 @@ import Header from '../components/Header';
 import styles from '../css/Doar.module.css';
 
 function Doar() {
-  // NOVO: Estado para controlar a etapa do formulário
   const [step, setStep] = useState(1); 
   
   const [tipoDoador, setTipoDoador] = useState('Pessoa física');
   
-  // ALTERADO: formData agora inclui os campos da etapa 2
   const [formData, setFormData] = useState({
-    // Etapa 1
     nome: '',
     cpfCnpj: '',
     email: '',
@@ -19,13 +16,11 @@ function Doar() {
     rua: '',
     numero: '',
     bairro: '',
-    // Etapa 2
     valorDoado: '',
-    meioPagamento: 'Pix' // Valor padrão
+    meioPagamento: 'Pix'
   });
   
   const tiposDeDoador = ['Pessoa física', 'Empresa', 'Supermercado', 'HortiFruit', 'Outro'];
-  // NOVO: Opções da Etapa 2
   const meiosDePagamento = ['Cartão de Crédito', 'Débito', 'Pix'];
 
   const handleChange = (e) => {
@@ -41,9 +36,9 @@ function Doar() {
     setFormData(prevData => ({ ...prevData, cpfCnpj: '' }));
   };
 
-  // NOVO: Funções para navegar entre as etapas
+
   const handleProximo = () => {
-    // Você pode adicionar validação aqui antes de avançar
+
     setStep(step + 1);
   };
 
@@ -51,13 +46,10 @@ function Doar() {
     setStep(step - 1);
   };
 
-  // NOVO: Função para o envio final do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você enviaria todos os dados (formData) para sua API/backend
     console.log("Dados finais da doação:", formData);
     alert('Doação registrada com sucesso!');
-    // Opcional: Redirecionar ou limpar o formulário
     setStep(1);
     setFormData({
         nome: '', cpfCnpj: '', email: '', telefone: '', cep: '',
@@ -80,10 +72,8 @@ function Doar() {
         <div className={styles.formContainer}>
           <h1>Quero doar</h1>
           
-          {/* ALTERADO: O formulário agora usa o handleSubmit final */}
           <form onSubmit={handleSubmit}>
 
-            {/* --- ETAPA 1: DADOS DO DOADOR --- */}
             {step === 1 && (
               <>
                 <section className={styles.formSection}>
@@ -156,7 +146,6 @@ function Doar() {
               </>
             )}
 
-            {/* --- ETAPA 2: VALOR E PAGAMENTO (NOVO) --- */}
             {step === 2 && (
               <>
                 <section className={styles.formSection}>
@@ -191,39 +180,32 @@ function Doar() {
                     ))}
                   </div>
                   
-                  {/* Opcional: Mostrar QR Code do Pix */}
                   {formData.meioPagamento === 'Pix' && (
                     <div className={styles.pixContainer}>
                       <p>Escaneie o QR Code para pagar:</p>
-                      {/* Lembre-se de substituir pela sua imagem de QR Code real */}
                       <img src="https://via.placeholder.com/200x200.png?text=Seu+QR+Code+Pix" alt="QR Code Pix" />
                       <p><strong>Chave Pix:</strong> seu-email@dominio.com</p>
                     </div>
                   )}
-                  {/* Você pode adicionar campos de Cartão de Crédito/Débito aqui da mesma forma */}
 
                 </section>
               </>
             )}
 
-            {/* --- BOTÕES DE NAVEGAÇÃO (ALTERADO) --- */}
             <div className={styles.actionButtons}>
               
-              {/* Só mostra VOLTAR se não estiver na primeira etapa */}
               {step > 1 && (
                 <button type="button" className={styles.btnVoltar} onClick={handleVoltar}>
                   VOLTAR
                 </button>
               )}
               
-              {/* Mostra PRÓXIMO apenas na etapa 1 */}
               {step === 1 && (
                 <button type="button" className={styles.btnProximo} onClick={handleProximo}>
                   PRÓXIMO
                 </button>
               )}
 
-              {/* Mostra CONCLUIR na última etapa (tipo submit) */}
               {step === 2 && (
                 <button type="submit" className={styles.btnProximo}>
                   CONCLUIR DOAÇÃO
